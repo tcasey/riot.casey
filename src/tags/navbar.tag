@@ -2,27 +2,31 @@
 
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
+      <a href="#" class="brand-logo links"><i class="material-icons">fingerprint</i></a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#bio">bio</a></li>
-        <li><a href="#projects">projects</a></li>
-        <li><a href="#skills">skills</a></li>
+        <li><a class="links" href="#/bio">bio</a></li>
+        <li><a class="links" href="#/projects">projects</a></li>
+        <li><a class="links" href="#/skills">skills</a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><a href="#bio">bio</a></li>
-        <li><a href="#projects">projects</a></li>
-        <li><a href="#skills">skills</a></li>
+        <li><a class="links" href="#/bio">bio</a></li>
+        <li><a class="links" href="#/projects">projects</a></li>
+        <li><a class="links" href="#/skills">skills</a></li>
       </ul>
     </div>
   </nav>
 
   <style>
     nav {
-      background-color: rgba(0,0,0,.75);
+      background-color: #f3f3f3;
+      font-family: 'Quicksand', sans-serif;
+    }
+    .links, .material-icons {
+      color: #bdb380;
     }
     .brand-logo {
-      margin-left: 1em;
+      /*margin-left: 1em;*/
     }
   </style>
 

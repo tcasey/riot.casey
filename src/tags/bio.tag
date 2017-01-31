@@ -6,7 +6,10 @@
   </div>
 
   <style>
-    .test{
+    .container {
+      font-family: 'Quicksand', sans-serif;
+    }
+    .test {
       color: #8fb9ff;
     }
   </style>
@@ -14,7 +17,7 @@
   <script>
     this.on('mount', function(){
       var $node = $(this.root);
-      $node.find('span').hide().fadeIn(1500);
+      $node.find('span').hide().fadeIn(500);
     });
   </script>
 
