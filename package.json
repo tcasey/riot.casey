@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --host 0.0.0.0 --watch-poll",
-    "dev2": "webpack-dev-server"
+    "dev2": "webpack-dev-server",
+    "watch": "webpack --watch"
   },
   "keywords": [],
   "author": "",
@@ -25,9 +26,9 @@
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
-    "hammerjs": "^2.0.8",
     "materialize-css": "^0.97.8",
     "riot": "^3.0.4",
-    "riot-route": "^3.0.2"
+    "riot-route": "^3.0.2",
+    "riotgear": "^3.5.0"
   }
 }

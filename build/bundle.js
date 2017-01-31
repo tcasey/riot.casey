@@ -49,17 +49,19 @@
 	__webpack_require__(1);
 	__webpack_require__(6);
 	__webpack_require__(30);
+	// require('riotgear/dist/rg.min.js');
 
 	// require all your necessary elements
 	__webpack_require__(33);
 	__webpack_require__(35);
 	__webpack_require__(36);
-	__webpack_require__(49);
-	__webpack_require__(50);
-	__webpack_require__(48);
+	__webpack_require__(37);
+	__webpack_require__(38);
+	__webpack_require__(39);
+	__webpack_require__(43);
 
 	// route file
-	__webpack_require__(39);
+	__webpack_require__(40);
 
 /***/ },
 /* 1 */
@@ -10381,7 +10383,7 @@
 /* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;var __WEBPACK_AMD_DEFINE_RESULT__;var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_LOCAL_MODULE_0__;var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_LOCAL_MODULE_0__;var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var __WEBPACK_AMD_DEFINE_RESULT__;var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 	 * Materialize v0.97.8 (http://materializecss.com)
 	 * Copyright 2014-2015 Materialize
 	 * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
@@ -15829,7 +15831,7 @@
 
 	var riot = __webpack_require__(34);
 
-	riot.tag2('navbar', '<nav> <div class="nav-wrapper"> <a href="#" class="brand-logo">Logo</a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a> <ul class="right hide-on-med-and-down"> <li><a href="#bio">bio</a></li> <li><a href="#projects">projects</a></li> <li><a href="#skills">skills</a></li> </ul> <ul class="side-nav" id="mobile-demo"> <li><a href="#bio">bio</a></li> <li><a href="#projects">projects</a></li> <li><a href="#skills">skills</a></li> </ul> </div> </nav>', 'navbar nav,[data-is="navbar"] nav{ background-color: rgba(0,0,0,.75); } navbar .brand-logo,[data-is="navbar"] .brand-logo{ margin-left: 1em; }', '', function(opts) {
+	riot.tag2('navbar', '<nav> <div class="nav-wrapper"> <a href="#" class="brand-logo links"><i class="material-icons">fingerprint</i></a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a> <ul class="right hide-on-med-and-down"> <li><a class="links" href="#/bio">bio</a></li> <li><a class="links" href="#/projects">projects</a></li> <li><a class="links" href="#/skills">skills</a></li> </ul> <ul class="side-nav" id="mobile-demo"> <li><a class="links" href="#/bio">bio</a></li> <li><a class="links" href="#/projects">projects</a></li> <li><a class="links" href="#/skills">skills</a></li> </ul> </div> </nav>', 'navbar nav,[data-is="navbar"] nav{ background-color: #f3f3f3; font-family: \'Quicksand\', sans-serif; } navbar .links,[data-is="navbar"] .links,navbar .material-icons,[data-is="navbar"] .material-icons{ color: #bdb380; } navbar .brand-logo,[data-is="navbar"] .brand-logo{ }', '', function(opts) {
 	    this.on('mount', function(){
 
 	      var $node = $(this.root);
@@ -15844,12 +15846,8 @@
 
 	var riot = __webpack_require__(34);
 
-	riot.tag2('footing', '<div class="container-fluid"> <div class="row"> <footer class="footer-wrapper"> <section class="social-media-container"> <virtual each="{social_link in social_media_items}"> <a class="social_media_link" target="_blank" href="{social_link.url}"> <img class="tooltipped" data-position="top" data-delay="30" data-tooltip="{social_link.title}" riot-src="{social_link.src}" alt="{social_link.title}"> </a> <img src="" alt=""> </virtual> </section> </footer> </div> </div>', 'footing .footer-wrapper,[data-is="footing"] .footer-wrapper{ background-color:#282828; width:100%; height:55px; position:fixed; bottom:0px; left:0px; z-index:1002; } footing .social-media-container,[data-is="footing"] .social-media-container{ padding: 1em; display: flex; justify-content: space-around; width: 100%; height:100%; } footing .social_media_link img,[data-is="footing"] .social_media_link img{ height:100%; padding:5%; }', '', function(opts) {
+	riot.tag2('footing', '<div class="container-fluid"> <div class="row"> <footer class="footer-wrapper"> <section class="social-media-container"> <virtual each="{social_link in social_media_items}"> <a class="social_media_link" target="_blank" href="{social_link.url}"> <img riot-src="{social_link.src}" alt="{social_link.title}"> </a> <img src="" alt=""> </virtual> </section> </footer> </div> </div>', 'footing .footer-wrapper,[data-is="footing"] .footer-wrapper{ background-color:#f3f3f3; width:100%; height:55px; position:fixed; bottom:0px; left:0px; z-index:1002; } footing .social-media-container,[data-is="footing"] .social-media-container{ padding: 1.2em; display: flex; justify-content: space-around; width: 100%; height:100%; } footing .social_media_link img,[data-is="footing"] .social_media_link img{ height:100%; padding:5%; }', '', function(opts) {
 
-	    this.on('mount', function() {
-	      var $node = $(this.root);
-	      $node.find('.tooltipped').tooltip({delay: 50});
-	    })
 
 	    this.social_media_items = [
 	    {title:'Twitter', src: 'public/images/footer_assets/twitter.svg', url: 'https://twitter.com/_tcasey_'},
@@ -15859,34 +15857,46 @@
 
 
 /***/ },
-/* 37 */,
-/* 38 */,
+/* 37 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var riot = __webpack_require__(34);
+
+	riot.tag2('projects', '<div class="container center-align"> <h1 class="test">projects</h1> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span> </div>', 'projects .container,[data-is="projects"] .container{ font-family: \'Quicksand\', sans-serif; } projects .test,[data-is="projects"] .test{ color: #8fb9ff; }', '', function(opts) {
+	    this.on('mount', function(){
+	      var $node = $(this.root);
+	      $node.find('span').hide().fadeIn(500);
+	    });
+	});
+
+
+/***/ },
+/* 38 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var riot = __webpack_require__(34);
+
+	riot.tag2('skills', '<div class="container center-align"> <h1 class="test scale-transition scale-out">skills</h1> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span> </div>', 'skills .container,[data-is="skills"] .container{ font-family: \'Quicksand\', sans-serif; } skills .test,[data-is="skills"] .test{ color: #8fb9ff; }', '', function(opts) {
+	    this.on('mount', function(){
+	      var $node = $(this.root);
+	      $node.find('span').hide().fadeIn(500);
+	    });
+	});
+
+
+/***/ },
 /* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-
 	var riot = __webpack_require__(34);
-	var route = __webpack_require__(40);
 
-	riot.mount('*');
-	route(function (scene) {
-	  switch (scene) {
-	    case 'skills':
-	      riot.mount('#main-viewport', 'skills');
-	      break;
-	    case 'bio':
-	      riot.mount('#main-viewport', 'bio');
-	      break;
-	    default:
-	      // root of website
-	      riot.mount('#main-viewport', 'projects');
-	      break;
-	  }
+	riot.tag2('bio', '<div class="container center-align"> <h1 class="test">bio</h1> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span> </div>', 'bio .container,[data-is="bio"] .container{ font-family: \'Quicksand\', sans-serif; } bio .test,[data-is="bio"] .test{ color: #8fb9ff; }', '', function(opts) {
+	    this.on('mount', function(){
+	      var $node = $(this.root);
+	      $node.find('span').hide().fadeIn(500);
+	    });
 	});
 
-	route.base('#');
-	route.start(true);
 
 /***/ },
 /* 40 */
@@ -15894,9 +15904,48 @@
 
 	'use strict';
 
+	var riot = __webpack_require__(34);
+	var route = __webpack_require__(41);
+
+	riot.mount('*');
+	route(function (scene) {
+	    switch (scene) {
+
+	        case 'skills':
+	            riot.mount('#main-viewport', 'skills');
+	            break;
+
+	        case 'bio':
+	            riot.mount('#main-viewport', 'bio');
+	            break;
+
+	        case 'projects':
+	            riot.mount('#main-viewport', 'projects');
+	            break;
+
+	        case 'home':
+	            riot.mount('#main-viewport', 'home');
+	            break;
+
+	        default:
+	            // root of website
+	            riot.mount('#main-viewport', 'home');
+	            break;
+	    }
+	});
+
+	route.base('#');
+	route.start(true);
+
+/***/ },
+/* 41 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
 	function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
-	var observable = _interopDefault(__webpack_require__(41));
+	var observable = _interopDefault(__webpack_require__(42));
 
 	/**
 	 * Simple client-side router
@@ -16240,7 +16289,7 @@
 
 
 /***/ },
-/* 41 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;(function(window, undefined) {var observable = function(el) {
@@ -16378,50 +16427,16 @@
 	})(typeof window != 'undefined' ? window : undefined);
 
 /***/ },
-/* 42 */,
-/* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */,
-/* 48 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var riot = __webpack_require__(34);
 
-	riot.tag2('bio', '<div class="container center-align"> <h1 class="test">bio</h1> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span> </div>', 'bio .test,[data-is="bio"] .test{ color: #8fb9ff; }', '', function(opts) {
+	riot.tag2('home', '<div class="container center-align"> <h1 class="test">home</h1> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span> </div>', 'home .container,[data-is="home"] .container{ font-family: \'Quicksand\', sans-serif; } home .test,[data-is="home"] .test{ color: #8fb9ff; }', '', function(opts) {
 	    this.on('mount', function(){
 	      var $node = $(this.root);
-	      $node.find('span').hide().fadeIn(1500);
+	      $node.find('span').hide().fadeIn(500);
 	    });
-	});
-
-
-/***/ },
-/* 49 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var riot = __webpack_require__(34);
-
-	riot.tag2('projects', '<div class="container center-align"> <h1 class="test">projects</h1> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span> </div>', 'projects .test,[data-is="projects"] .test{ color: #8fb9ff; }', '', function(opts) {
-	    this.on('mount', function(){
-	      var $node = $(this.root);
-	      $node.find('span').hide().fadeIn(1500);
-	    });
-	});
-
-
-/***/ },
-/* 50 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var riot = __webpack_require__(34);
-
-	riot.tag2('skills', '<div class="container center-align"> <h1 class="test">skills</h1> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span> </div>', 'skills .test,[data-is="skills"] .test{ color: #8fb9ff; }', '', function(opts) {
-	  this.on('mount', function(){
-	    var $node = $(this.root);
-	    $node.find('span').hide().fadeIn(1500);
-	  });
 	});
 
 
